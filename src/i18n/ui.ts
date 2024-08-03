@@ -19,7 +19,7 @@ export const ui = {
     'pages.tags.allTags': 'All tags',
     'pages.tags.noTags': 'No tags found',
     'pages.tags.viewPosts': 'View all posts with tag {tag}',
-    'pages.projects.title': 'Projects',
+    'pages.projects.title': 'Resume',
     'pages.projects.description': 'My Resume',
     'pages.projects.allProjects': 'My Resume',
     'pages.projects.showcase': 'Please note I am not currently seeking opportunities.',
