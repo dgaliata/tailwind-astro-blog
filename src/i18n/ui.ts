@@ -22,7 +22,7 @@ export const ui = {
     'pages.projects.title': 'Resume',
     'pages.projects.description': 'My Resume',
     'pages.projects.allProjects': 'My Resume',
-    'pages.projects.showcase': 'Please note I am not currently seeking opportunities.',
+    'pages.projects.showcase': 'Please note that I am not currently seeking opportunities.',
     'pages.blog.title': 'Blog',
     'pages.blog.description': 'All blog posts',
     'pages.404.title': '404 - Not Found',
