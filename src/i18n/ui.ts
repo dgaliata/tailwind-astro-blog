@@ -43,7 +43,7 @@ export const ui = {
     // Navigation
     'nav.home': 'Home',
     'nav.blog': 'Blog',
-    'nav.projects': 'Projects',
+    //'nav.projects': 'Projects',
     'nav.tags': 'Tags',
     'nav.about': 'About',
 
