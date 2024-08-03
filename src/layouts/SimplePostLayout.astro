@@ -130,7 +130,7 @@ const { Content, headings } = await post.render();
           </div>
         </div>
         {
-          ["bottom", "both"].includes(POST_METADATA.showShareButtons) ? (
+          ["bottom", "both"].includes(POST_METADATA) ? (
             <SocialShareButtons
               title={post.data.title}
               description={post.data.summary}
