@@ -6,173 +6,21 @@ import RootLayout from "@/layouts/RootLayout.astro";
 const t = useTranslations();
 
 const projectsData = [
-{
-    section: "Summary",
-    description: `Security Architect with over 15 years of experience in the IT, Consulting, and Cybersecurity space. I am dedicated to lifelong learning and passionate about the ever-evolving technology industry.`,
+  {
+    title: "A Search Engine",
+    description: `What if you could look up any information in the world? Webpages, images, videos
+    and more. Google has many features to help you find exactly what you're looking
+    for.`,
+    imgSrc:
+      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    href: "https://www.google.com",
   },
   {
-    section: "Education",
-    details: [
-      {
-        institution: "Central Washington University",
-        period: "2023 - 2024",
-        description: "Master of Science, Information Technology and Administrative Management - Cybersecurity",
-      },
-      {
-        institution: "Western Governors University",
-        period: "2008 - 2010",
-        description: "Bachelor of Science, Information Technology",
-      },
-    ],
-  },
-  {
-    section: "Industry Certifications",
-    certifications: [
-      { vendor: "ISACA", name: "Certified Information Security Manager (CISM)" },
-      { vendor: "(ISC)²", name: "Certified Cloud Security Professional (CCSP)" },
-      { vendor: "(ISC)²", name: "Certified in Cybersecurity (CC)" },
-      { vendor: "Cloud Security Alliance", name: "Certificate of Cloud Security Knowledge (CCSK)" },
-      { vendor: "Cloud Security Alliance", name: "Certificate of Competence in Zero Trust (CCZT)" },
-      { vendor: "Cloud Security Alliance & ISACA", name: "Certificate of Cloud Auditing Knowledge (CCAK)" },
-      { vendor: "Amazon (AWS)", name: "Certified SysOps Administrator – Associate" },
-      { vendor: "Amazon (AWS)", name: "Certified Cloud Practitioner" },
-      { vendor: "GitHub", name: "GitHub Foundations" },
-      { vendor: "Microsoft", name: "MCSA: Windows Server, Azure Fundamentals" },
-      { vendor: "CompTIA", name: "A+, Network +, and Project+" },
-    ],
-  },
-  {
-    section: "Work Experience",
-    experiences: [
-      {
-        company: "Aquia",
-        period: "Remote, December 2021 - Present",
-        website: "https://aquia.us",
-        position: "Principal Security Architect",
-        responsibilities: [
-          "Analyze cloud / cyber security requirements and technologies to identify potential risks or issues.",
-          "Participate in design of solutions, defenses, or mitigation approaches.",
-          "Research, document, and apply cyber best practices, controls, policies, procedures, and standards.",
-          "Apply cyber or information privacy approaches to systems, networks, services, devices, tools, communications, policies, or business processes.",
-          "Participate in special projects or investigations into specific technology or solution issues and research and piloting of new technologies.",
-          "Serve as a point of contact for engineering efforts while maintaining compliance with the customer's policies and guidelines.",
-          "Maintain documentation for exceptions to standards.",
-          "Provide timely and adequate response to threats/alerts.",
-          "Assess security events to drive to a resolution; provides timely and sufficient response to security incidents and assessment services.",
-        ],
-      },
-      {
-        company: "Coblatix",
-        period: "San Francisco, CA, June 2021 - Dec 2021",
-        website: "https://cobaltix.com",
-        position: "Senior Enterprise Network and Systems Consultant",
-        responsibilities: [
-          "Technical lead and project manager for customers IT services.",
-          "Managed IT initiatives and collaborated with in-house technical staff on wide range of projects.",
-          "Provided strategic advice on technology services to achieve goals.",
-          "Followed cybersecurity best practices and engaged in training with clients.",
-          "Microsoft 365 migrations + Support and Azure administration- Intune and Cloud App Security.",
-          "Network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).",
-          "Prepared documentation and presented progress reports to customers.",
-        ],
-      },
-      {
-        company: "Nims & Associates",
-        period: "Petaluma, CA, Nov 2017 - June 2021",
-        website: "https://nimsassociates.com",
-        position: "Senior IT Systems Engineer",
-        responsibilities: [
-          "Serve as the technical lead for clients throughout the Bay Area.",
-          "Implement projects ranging from on premises server builds (VMWare + Hyper-V), to Cloud deployments (AWS & Azure).",
-          "Office 365 migrations and Azure administration- Intune, and Cloud App Security.",
-          "Network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).",
-          "Perform project management on all projects.",
-          "Lead Engineer for all technology related topics and customer questions, issues and service opportunities.",
-          "Execution of project plans within time and budget constraints.",
-          "Perform security assessments and audits for current and prospective clients.",
-          "Develop backup and disaster recovery strategies.",
-          "Monitor backups (Local and offsite) for all clients.",
-          "Document client systems to facilitate future training and support activities.",
-          "Manage AWS Partnership for the entire company.",
-        ],
-      },
-      {
-        company: "KLH Consulting",
-        period: "Santa Rosa, CA, Apr 2013 - Nov 2017",
-        website: "https://klhconsulting.com",
-        position: "Senior Network Engineer",
-        responsibilities: [
-          "Designed, implemented, analyzed, and maintained the IT Infrastructure of internal and external customer environments; including network connectivity and utilization, Windows server administration, virtualization, performance tuning, backup and restore.",
-          "Implemented projects ranging from virtualization server builds (VMWare ESXi), Office 365 migrations, network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).",
-          "Assisted with project management tasks on all projects.",
-          "Technical lead for all technology related topics and customer questions, issues and service opportunities.",
-          "Reviewed network and system monitoring reports on a regular basis to identify trends.",
-          "Managed internal and external resources in tasks relating to scheduling, implementing, and delivering client projects in a timely manner under demanding time constraints.",
-          "Supervise work of internal resources on client engagements to assure best practices are followed.",
-          "Performed security assessments and audits for current and prospective clients.",
-          "Developed backup and disaster recovery strategies.",
-          "Monitored backups (Local and offsite) for all clients.",
-          "Documented client systems to facilitate future training and support activities.",
-          "Consistently remained 100% billable on time sheets.",
-        ],
-      },
-      {
-        company: "Portola Systems",
-        period: "Sebastopol, CA, Dec 2010 - Apr 2013",
-        website: "https://www.portolasystems.net/",
-        position: "Engineer",
-        responsibilities: [
-          "Designed and implemented Windows server environments including Active Directory 2003/2008, DHCP, DNS, WEB (IIS), Print, File services, DFS, and Group Policy Objects.",
-          "Configured and deployed Cisco networking technologies including switching, routing, security (ASA firewalls + VPN), and Cisco Aironet wireless devices.",
-          "Supported and administered VMWare server and clustered environments.",
-          "Served small and medium businesses in all facets of technology, including workstations, servers, printers, networks, vendor specific hardware and software.",
-          "Supported remote access solution implementations: VPN, Terminal Services, and Citrix.",
-          "Administered Exchange 2003 / 2007 / 2010 servers.",
-          "Provided phone system administration and support (Cisco CME, Unity, Nortel, and Shortel VOIP).",
-          "Served as escalation point for Helpdesk staff.",
-          "Mentor and trainer for new hires.",
-        ],
-      },
-      {
-        company: "Hansel Enterprises",
-        period: "Petaluma, CA, Apr 2009 - Nov 2010",
-        website: "https://gohansel.com",
-        position: "Junior Systems Administrator",
-        responsibilities: [
-          "Responsible for all Helpdesk/desktop tickets and email.",
-          "Server support for all company-wide servers (File, Print, VPN, DNS, DHCP, DC’s, Web, etc.).",
-          "Administration of tape backups daily.",
-          "Deployed company’s first Linux server.",
-          "Provided support for third party software including company wide proprietary DMS system.",
-        ],
-      },
-      {
-        company: "Marketlive",
-        period: "Petaluma, CA, Sep 2007 - Apr 2009",
-        website: "https://kibocommerce.com/",
-        position: "NOC Technician II",
-        responsibilities: [
-          "Served as escalation point for NOC team members for trouble tickets and severity 1 outages.",
-          "Provided support for Windows Server OS 2000/2003 and Linux OS, including but not limited to administration of JVM, Apache, IIS services, MySQL and site performance research.",
-          "Responsible for client account access including Active Directory administration, and FTP.",
-          "Daily use of monitoring tools such as Gomez, Keynote, Nagios, and MRTG.",
-          "Contributed numerous documents to NOC knowledge base and training modules.",
-          "Trained new hires.",
-        ],
-      },
-      {
-        company: "Syntechs",
-        period: "Petaluma, CA, Nov 2006 - Sep 2007",
-        website: "https://syntechs.com/",
-        position: "Computer Technician",
-        responsibilities: [
-          "Provide hardware diagnosis and repair for laptop and desktop computers.",
-          "Accept service calls for computer hardware related issues.",
-          "Repaired computer systems via in home or business service calls.",
-          "Performed follow up with customers prior to closing tickets.",
-        ],
-      },
-    ],
+    title: "The Time Machine",
+    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
+    to the desired date and press "Go". No more worrying about lost keys or
+    forgotten headphones with this simple yet affordable solution.`,
+    imgSrc: "https://placeholder.com/500x190",
+    href: "/blog/the-time-machine",
   },
 ];
----
