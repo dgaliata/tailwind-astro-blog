@@ -1,11 +1,62 @@
 ---
-import SocialIcon from '@/components/social-icons/index.astro';
-import { SITE_METADATA } from '@/consts';
-import { useTranslations } from '@/i18n';
-// import Link from './Link.astro';
+import Card from "@/components/Card.astro";
+import { useTranslations } from "@/i18n";
+import RootLayout from "@/layouts/RootLayout.astro";
 
 const t = useTranslations();
+
+const projectsData = [
+  {
+    title: "A Search Engine",
+    description: `What if you could look up any information in the world? Webpages, images, videos
+    and more. Google has many features to help you find exactly what you're looking
+    for.`,
+    imgSrc:
+      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    href: "https://www.google.com",
+  },
+  {
+    title: "The Time Machine",
+    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
+    to the desired date and press "Go". No more worrying about lost keys or
+    forgotten headphones with this simple yet affordable solution.`,
+    imgSrc: "https://placeholder.com/500x190",
+    href: "/blog/the-time-machine",
+  },
+];
 ---
+
+<RootLayout
+  title={t("pages.projects.title")}
+  description={t("pages.projects.description")}
+>
+  <div class="divide-y divide-gray-200 dark:divide-gray-700">
+    <div class="space-y-2 pb-8 pt-6 md:space-y-5">
+      <h1
+        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+      >
+        {t("pages.projects.allProjects")}
+      </h1>
+      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
+        {t("pages.projects.showcase")}
+      </p>
+    </div>
+    <div class="container py-12">
+      <div class="-m-4 flex flex-wrap">
+        {
+          projectsData.map((d) => (
+            <Card
+              title={d.title}
+              description={d.description}
+              imgSrc={d.imgSrc}
+              href={d.href}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</RootLayout>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -267,18 +318,6 @@ const t = useTranslations();
         <li>Performed follow up with customers prior to closing tickets.</li>
       </ul>
     </section>
-
-    <footer>
-      <div class="social-icons">
-        <SocialIcon kind="mail" href={`mailto:${SITE_METADATA.email}`} size={6} />
-        <SocialIcon kind="github" href={SITE_METADATA.github} size={6} />
-        <SocialIcon kind="linkedin" href={SITE_METADATA.linkedin} size={6} />
-      </div>
-      <div>
-        <p>{` • `}</p>
-        <p>{`© ${new Date().getFullYear()}`}</p>
-        <p>{` • `}</p>
-        <Link href="/">{t('siteMetadata.title')}</Link>
       </div>
     </footer>
   </div>
