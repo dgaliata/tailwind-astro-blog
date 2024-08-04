@@ -1,0 +1,24 @@
+---
+title: Export AD Audit details to a CSV File
+summary: Learn how to export AD Audit details to CSV.
+postLayout: simple
+date: '2019-06-20'
+cover: '@/assets/4393.jpg'
+tags: ['aws','cloud']
+---
+# Active Directory Audit
+
+This is a very useful script I wrote to generate a .csv that shows valuable information from Active Directory.
+
+```bash
+$OutputPath = "c:\\support\\users.csv"  
+  
+$Year = "2019"  
+  
+$filename = "$($Year)\_users.csv"  
+  
+$YearUsers = Get-ADUser -Filter  {(Enabled -eq "True")} -Properties created, lastlogondate,passwordlastset,passwordneverexpires  
+  
+$YearUsers | select name, samaccountname, created,lastlogondate,passwordlastset,passwordneverexpires |  
+
+Export-Csv -Path $OutputPath$filename -NoTypeInformation -Force
