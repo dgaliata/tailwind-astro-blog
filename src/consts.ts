@@ -5,8 +5,8 @@
  */
 export const SITE_METADATA = {
   theme: "system", // Options: system, light, dark
-  siteUrl: "https://tasb.yon.fun/",
-  siteRepo: "https://github.com/wanoo21/tailwind-astro-starting-blog",
+  siteUrl: "https://galiata.blog",
+  siteRepo: "https://github.com/neoslashnet/tailwind-astro-blog",
   robots: "index, follow", // Options: index, noindex, follow, nofollow
 
   // These are not supported yet
