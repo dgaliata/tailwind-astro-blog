@@ -1,0 +1,34 @@
+---
+title: SNMP Configuration on Cisco switch and router
+summary: How to quickly configure SNMP on Cisco switch and router.
+postLayout: simple
+date: '2020-03-10'
+cover: '@/assets/cisco.jpg'
+tags: ['aws','cloud']
+---
+# Configuration Steps
+
+SNMP Config for a Cisco Router or Switch.
+
+Log into your router or switch.
+
+```bash
+configure terminal
+!
+Use the command below to add a Read-Only community string:
+!
+snmp-server community public RO
+!where "public" is the Read-only community string.
+!To add a Read-Write Community string, use the command below:
+
+!snmp-server community private RW
+!where "private" is the Read-write community string.
+!Exit the configuration mode and save the settings:
+exit
+!
+write memory
+!
+Building configuration...
+[OK]
+Router#
+```
