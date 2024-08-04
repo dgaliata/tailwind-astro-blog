@@ -19,9 +19,9 @@ export const ui = {
     'pages.tags.allTags': 'All tags',
     'pages.tags.noTags': 'No tags found',
     'pages.tags.viewPosts': 'View all posts with tag {tag}',
-    'pages.projects.title': 'Resume',
-    'pages.projects.description': 'My Resume',
-    'pages.projects.allProjects': 'My Resume',
+    //'pages.projects.title': 'Resume',
+    //'pages.projects.description': 'My Resume',
+    //'pages.projects.allProjects': 'My Resume',
     'pages.projects.showcase': 'Please note that I am not currently seeking opportunities.',
     'pages.blog.title': 'Blog',
     'pages.blog.description': 'All blog posts',
@@ -43,7 +43,7 @@ export const ui = {
     // Navigation
     'nav.home': 'Home',
     'nav.blog': 'Blog',
-    'nav.projects': 'Resume',
+    //'nav.projects': 'Resume',
     'nav.tags': 'Tags',
     'nav.about': 'About',
 
