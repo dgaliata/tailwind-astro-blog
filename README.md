@@ -17,4 +17,3 @@ More than just technical stuff, there are personal thoughts about work and life 
 - [Email](mailto:david@galiata.com)
 
 Thanks for reading!
-
