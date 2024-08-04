@@ -190,15 +190,15 @@ const projectsData = {
   title={t("pages.projects.title")}
   description={t("pages.projects.description")}
 >
-  <div class="divide-y divide-gray-200 dark:divide-green-400">
+  <div class="divide-y divide-gray-200 dark:divide-gray-700">
     <div class="space-y-2 pb-8 pt-6 md:space-y-5">
       <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-green-400 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
       >
         {projectsData.name}
       </h1>
       <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        {projectsData.title} @ <a href={projectsData.companyUrl}>{projectsData.company}</a>
+        {projectsData.title} @ <a href={projectsData.companyUrl} class="text-green-400">{projectsData.company}</a>
       </p>
       <p class="text-md leading-6 text-gray-500 dark:text-gray-400">
         <em>{projectsData.note}</em>
@@ -206,10 +206,10 @@ const projectsData = {
     </div>
     <div class="container py-12">
       <div class="prose dark:prose-dark">
-        <h2>Summary</h2>
+        <h2 class="text-blue-600">Summary</h2>
         <p>{projectsData.summary}</p>
 
-        <h2>Education</h2>
+        <h2 class="text-blue-600">Education</h2>
         {projectsData.education.map((edu) => (
           <p>
             <strong>{edu.institution}</strong><br />
@@ -218,7 +218,7 @@ const projectsData = {
           </p>
         ))}
 
-        <h2>Industry Certifications</h2>
+        <h2 class="text-blue-600">Industry Certifications</h2>
         <table>
           <thead>
             <tr>
@@ -236,12 +236,12 @@ const projectsData = {
           </tbody>
         </table>
 
-        <h2>Work Experience</h2>
+        <h2 class="text-blue-600">Work Experience</h2>
         {projectsData.workExperience.map((work) => (
           <div>
-            <h3>{work.company}</h3>
+            <h3 class="text-blue-600">{work.company}</h3>
             <p><em>{work.location}, {work.period}</em><br />
-            <strong>Website:</strong> <a href={work.website}>{work.company}</a></p>
+            <strong>Website:</strong> <a href={work.website} class="text-green-400">{work.company}</a></p>
             <p><strong>Description:</strong> {work.description}<br />
             <strong>Position:</strong> {work.position}</p>
             <p><strong>Responsibilities:</strong></p>
@@ -253,7 +253,7 @@ const projectsData = {
           </div>
         ))}
 
-        <p>Last updated on July 2024</p>
+        <p>Last updated on Nov 2022</p>
       </div>
     </div>
   </div>
