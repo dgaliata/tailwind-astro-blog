@@ -1,59 +1,286 @@
 ---
-import Card from "@/components/Card.astro";
-import { useTranslations } from "@/i18n";
-import RootLayout from "@/layouts/RootLayout.astro";
+import SocialIcon from '@/components/social-icons/index.astro';
+import { SITE_METADATA } from '@/consts';
+import { useTranslations } from '@/i18n';
+import Link from './Link.astro';
 
 const t = useTranslations();
-
-const projectsData = [
-  {
-    title: "A Search Engine",
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc:
-      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-    href: "https://www.google.com",
-  },
-  {
-    title: "The Time Machine",
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: "https://placeholder.com/500x190",
-    href: "/blog/the-time-machine",
-  },
-];
 ---
 
-<RootLayout
-  title={t("pages.projects.title")}
-  description={t("pages.projects.description")}
->
-  <div class="divide-y divide-gray-200 dark:divide-gray-700">
-    <div class="space-y-2 pb-8 pt-6 md:space-y-5">
-      <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
-      >
-        {t("pages.projects.allProjects")}
-      </h1>
-      <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        {t("pages.projects.showcase")}
-      </p>
-    </div>
-    <div class="container py-12">
-      <div class="-m-4 flex flex-wrap">
-        {
-          projectsData.map((d) => (
-            <Card
-              title={d.title}
-              description={d.description}
-              imgSrc={d.imgSrc}
-              href={d.href}
-            />
-          ))
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - David Galiata</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table th, .table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    .table th {
+      background-color: #f4f4f4;
+    }
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>David Galiata</h1>
+      <p>Principal Security Architect @ <a href="https://aquia.us" target="_blank">Aquia</a></p>
+      <p><em>Please note I am not currently exploring job opportunities at this time. This page was created for project/blog purposes only.</em></p>
+    </header>
+
+    <section class="section">
+      <h2>Summary</h2>
+      <p>Security Architect with over 15 years of experience in the IT, Consulting, and Cybersecurity space. I am dedicated to lifelong learning and passionate about the ever-evolving technology industry.</p>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <h3>Central Washington University</h3>
+      <p><em>2023 - 2024</em></p>
+      <ul>
+        <li>Major: Master of Science, Information Technology and Administrative Management - Cybersecurity</li>
+      </ul>
+
+      <h3>Western Governors University</h3>
+      <p><em>2008 - 2010</em></p>
+      <ul>
+        <li>Major: Bachelor of Science, Information Technology</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Industry Certifications</h2>
+      <table class="table">
+        <tr>
+          <th>Vendor</th>
+          <th>Name</th>
+        </tr>
+        <tr>
+          <td>ISACA</td>
+          <td>Certified Information Security Manager (CISM)</td>
+        </tr>
+        <tr>
+          <td>(ISC)²</td>
+          <td>Certified Cloud Security Professional (CCSP)</td>
+        </tr>
+        <tr>
+          <td>(ISC)²</td>
+          <td>Certified in Cybersecurity (CC)</td>
+        </tr>
+        <tr>
+          <td>Cloud Security Alliance</td>
+          <td>Certificate of Cloud Security Knowledge (CCSK)</td>
+        </tr>
+        <tr>
+          <td>Cloud Security Alliance</td>
+          <td>Certificate of Competence in Zero Trust (CCZT)</td>
+        </tr>
+        <tr>
+          <td>Cloud Security Alliance & ISACA</td>
+          <td>Certificate of Cloud Auditing Knowledge (CCAK)</td>
+        </tr>
+        <tr>
+          <td>Amazon (AWS)</td>
+          <td>Certified SysOps Administrator – Associate</td>
+        </tr>
+        <tr>
+          <td>Amazon (AWS)</td>
+          <td>Certified Cloud Practitioner</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>GitHub Foundations</td>
+        </tr>
+        <tr>
+          <td>Microsoft</td>
+          <td>MCSA: Windows Server, Azure Fundamentals</td>
+        </tr>
+        <tr>
+          <td>CompTIA</td>
+          <td>A+, Network +, and Project+</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Work Experience</h2>
+      
+      <h3>Aquia</h3>
+      <p><em>Remote, December 2021 - Present</em></p>
+      <p><strong>Website</strong>: <a href="https://aquia.us" target="_blank">aquia.us</a></p>
+      <p><strong>Position</strong>: Principal Security Architect</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Analyze cloud / cyber security requirements and technologies to identify potential risks or issues.</li>
+        <li>Participate in design of solutions, defenses, or mitigation approaches.</li>
+        <li>Research, document, and apply cyber best practices, controls, policies, procedures, and standards.</li>
+        <li>Apply cyber or information privacy approaches to systems, networks, services, devices, tools, communications, policies, or business processes.</li>
+        <li>Participate in special projects or investigations into specific technology or solution issues and research and piloting of new technologies.</li>
+        <li>Serve as a point of contact for engineering efforts while maintaining compliance with the customer's policies and guidelines.</li>
+        <li>Maintain documentation for exceptions to standards.</li>
+        <li>Provide timely and adequate response to threats/alerts.</li>
+        <li>Assess security events to drive to a resolution; provides timely and sufficient response to security incidents and assessment services.</li>
+      </ul>
+
+      <h3>Coblatix</h3>
+      <p><em>San Francisco, CA, June 2021 - Dec 2021</em></p>
+      <p><strong>Website</strong>: <a href="https://cobaltix.com" target="_blank">cobaltix</a></p>
+      <p><strong>Position</strong>: Senior Enterprise Network and Systems Consultant</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Technical lead and project manager for customers IT services.</li>
+        <li>Managed IT initiatives and collaborated with in-house technical staff on wide range of projects.</li>
+        <li>Provided strategic advice on technology services to achieve goals.</li>
+        <li>Followed cybersecurity best practices and engaged in training with clients.</li>
+        <li>Microsoft 365 migrations + Support and Azure administration- Intune and Cloud App Security.</li>
+        <li>Network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).</li>
+        <li>Prepared documentation and presented progress reports to customers.</li>
+      </ul>
+
+      <h3>Nims & Associates</h3>
+      <p><em>Petaluma, CA, Nov 2017 - June 2021</em></p>
+      <p><strong>Website</strong>: <a href="https://nimsassociates.com" target="_blank">nims & associates</a></p>
+      <p><strong>Position</strong>: Senior IT Systems Engineer</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Serve as the technical lead for clients throughout the Bay Area.</li>
+        <li>Implement projects ranging from on premises server builds (VMWare + Hyper-V), to Cloud deployments (AWS & Azure).</li>
+        <li>Office 365 migrations and Azure administration- Intune, and Cloud App Security.</li>
+        <li>Network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).</li>
+        <li>Perform project management on all projects.</li>
+        <li>Lead Engineer for all technology related topics and customer questions, issues and service opportunities.</li>
+        <li>Execution of project plans within time and budget constraints.</li>
+        <li>Perform security assessments and audits for current and prospective clients.</li>
+        <li>Develop backup and disaster recovery strategies.</li>
+        <li>Monitor backups (Local and offsite) for all clients.</li>
+        <li>Document client systems to facilitate future training and support activities.</li>
+        <li>Manage AWS Partnership for the entire company.</li>
+      </ul>
+
+      <h3>KLH Consulting</h3>
+      <p><em>Santa Rosa, CA, Apr 2013 - Nov 2017</em></p>
+      <p><strong>Website</strong>: <a href="https://klhconsulting.com" target="_blank">klh consulting</a></p>
+      <p><strong>Position</strong>: Senior Network Engineer</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Designed, implemented, analyzed, and maintained the IT Infrastructure of internal and external customer environments; including network connectivity and utilization, Windows server administration, virtualization, performance tuning, backup and restore.</li>
+        <li>Implemented projects ranging from virtualization server builds (VMWare ESXi), Office 365 migrations, network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).</li>
+        <li>Assisted with project management tasks on all projects.</li>
+        <li>Technical lead for all technology related topics and customer questions, issues and service opportunities.</li>
+        <li>Reviewed network and system monitoring reports on a regular basis to identify trends.</li>
+        <li>Managed internal and external resources in tasks relating to scheduling, implementing, and delivering client projects in a timely manner under demanding time constraints.</li>
+        <li>Supervise work of internal resources on client engagements to assure best practices are followed.</li>
+        <li>Performed security assessments and audits for current and prospective clients.</li>
+        <li>Developed backup and disaster recovery strategies.</li>
+        <li>Monitored backups (Local and offsite) for all clients.</li>
+        <li>Documented client systems to facilitate future training and support activities.</li>
+        <li>Consistently remained 100% billable on time sheets.</li>
+      </ul>
+
+      <h3>Portola Systems</h3>
+      <p><em>Sebastopol, CA, Dec 2010 - Apr 2013</em></p>
+      <p><strong>Website</strong>: <a href="https://www.portolasystems.net/" target="_blank">portola systems</a></p>
+      <p><strong>Position</strong>: Engineer</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Designed and implemented Windows server environments including Active Directory 2003/2008, DHCP, DNS, WEB (IIS), Print, File services, DFS, and Group Policy Objects.</li>
+        <li>Configured and deployed Cisco networking technologies including switching, routing, security (ASA firewalls + VPN), and Cisco Aironet wireless devices.</li>
+        <li>Supported and administered VMWare server and clustered environments.</li>
+        <li>Served small and medium businesses in all facets of technology, including workstations, servers, printers, networks, vendor specific hardware and software.</li>
+        <li>Supported remote access solution implementations: VPN, Terminal Services, and Citrix.</li>
+        <li>Administered Exchange 2003 / 2007 / 2010 servers.</li>
+        <li>Provided phone system administration and support (Cisco CME, Unity, Nortel, and Shortel VOIP).</li>
+        <li>Served as escalation point for Helpdesk staff.</li>
+        <li>Mentor and trainer for new hires.</li>
+      </ul>
+
+      <h3>Hansel Enterprises</h3>
+      <p><em>Petaluma, CA, Apr 2009 - Nov 2010</em></p>
+      <p><strong>Website</strong>: <a href="https://gohansel.com" target="_blank">hansel enterprises</a></p>
+      <p><strong>Position</strong>: Junior Systems Administrator</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Responsible for all Helpdesk/desktop tickets and email.</li>
+        <li>Server support for all company-wide servers (File, Print, VPN, DNS, DHCP, DC’s, Web, etc.).</li>
+        <li>Administration of tape backups daily.</li>
+        <li>Deployed company’s first Linux server.</li>
+        <li>Provided support for third party software including company wide proprietary DMS system.</li>
+      </ul>
+
+      <h3>Marketlive</h3>
+      <p><em>Petaluma, CA, Sep 2007 - Apr 2009</em></p>
+      <p><strong>Website</strong>: <a href="https://kibocommerce.com/" target="_blank">marketlive</a></p>
+      <p><strong>Position</strong>: NOC Technician II</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Served as escalation point for NOC team members for trouble tickets and severity 1 outages.</li>
+        <li>Provided support for Windows Server OS 2000/2003 and Linux OS, including but not limited to administration of JVM, Apache, IIS services, MySQL and site performance research.</li>
+        <li>Responsible for client account access including Active Directory administration, and FTP.</li>
+        <li>Daily use of monitoring tools such as Gomez, Keynote, Nagios, and MRTG.</li>
+        <li>Contributed numerous documents to NOC knowledge base and training modules.</li>
+        <li>Trained new hires.</li>
+      </ul>
+
+      <h3>Syntechs</h3>
+      <p><em>Petaluma, CA, Nov 2006 - Sep 2007</em></p>
+      <p><strong>Website</strong>: <a href="https://syntechs.com/" target="_blank">syntechs</a></p>
+      <p><strong>Position</strong>: Computer Technician</p>
+      <p><strong>Responsibilities</strong>:</p>
+      <ul>
+        <li>Provide hardware diagnosis and repair for laptop and desktop computers.</li>
+        <li>Accept service calls for computer hardware related issues.</li>
+        <li>Repaired computer systems via in home or business service calls.</li>
+        <li>Performed follow up with customers prior to closing tickets.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="social-icons">
+        <SocialIcon kind="mail" href={`mailto:${SITE_METADATA.email}`} size={6} />
+        <SocialIcon kind="github" href={SITE_METADATA.github} size={6} />
+        <SocialIcon kind="linkedin" href={SITE_METADATA.linkedin} size={6} />
       </div>
-    </div>
+      <div>
+        <p>{` • `}</p>
+        <p>{`© ${new Date().getFullYear()}`}</p>
+        <p>{` • `}</p>
+        <Link href="/">{t('siteMetadata.title')}</Link>
+      </div>
+    </footer>
   </div>
-</RootLayout>
+</body>
+</html>
