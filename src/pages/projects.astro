@@ -5,25 +5,185 @@ import RootLayout from "@/layouts/RootLayout.astro";
 
 const t = useTranslations();
 
-const projectsData = [
-  {
-    title: "A Search Engine",
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc:
-      "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-    href: "https://www.google.com",
-  },
-  {
-    title: "The Time Machine",
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: "https://placeholder.com/500x190",
-    href: "/blog/the-time-machine",
-  },
-];
+const projectsData = {
+  name: "David Galiata",
+  title: "Principal Security Architect",
+  company: "Aquia",
+  companyUrl: "https://aquia.us",
+  note: "Please note I am not currently exploring job opportunities at this time. This page was created for project/blog purposes only.",
+  summary: `Security Architect with over 15 years of experience in the IT, Consulting, and Cybersecurity space. I am dedicated to lifelong learning and passionate about the ever-evolving technology industry.`,
+  education: [
+    {
+      institution: "Central Washington University",
+      year: "2023 - 2024",
+      degree: "Master of Science, Information Technology and Administrative Management- Cybersecurity",
+    },
+    {
+      institution: "Western Governors University",
+      year: "2008 - 2010",
+      degree: "Bachelor of Science, Information Technology",
+    },
+  ],
+  certifications: [
+    { vendor: "ISACA", name: "Certified Information Security Manager (CISM)" },
+    { vendor: "(ISC)²", name: "Certified Cloud Security Professional (CCSP)" },
+    { vendor: "(ISC)²", name: "Certified in Cybersecurity (CC)" },
+    { vendor: "Cloud Security Alliance", name: "Certificate of Cloud Security Knowledge (CCSK)" },
+    { vendor: "Cloud Security Alliance", name: "Certificate of Competence in Zero Trust (CCZT)" },
+    { vendor: "Cloud Security Alliance & ISACA", name: "Certificate of Cloud Auditing Knowledge (CCAK)" },
+    { vendor: "Amazon (AWS)", name: "Certified SysOps Administrator – Associate" },
+    { vendor: "Amazon (AWS)", name: "Certified Cloud Practitioner" },
+    { vendor: "GitHub", name: "GitHub Foundations" },
+    { vendor: "Microsoft", name: "MCSA: Windows Server, Azure Fundamentals" },
+    { vendor: "CompTIA", name: "A+, Network +, and Project+" },
+  ],
+  workExperience: [
+    {
+      company: "Aquia",
+      location: "Remote",
+      period: "December 2021 - Present",
+      website: "https://aquia.us",
+      position: "Principal Security Architect",
+      description: "Security and Compliance lead for AI/ML program within the US Government.",
+      responsibilities: [
+        "Analyze cloud / cyber security requirements and technologies to identify potential risks or issues.",
+        "Participate in design of solutions, defenses, or mitigation approaches.",
+        "Research, document, and apply cyber best practices, controls, policies, procedures, and standards.",
+        "Apply cyber or information privacy approaches to systems, networks, services, devices, tools, communications, policies, or business processes.",
+        "Participate in special projects or investigations into specific technology or solution issues and research and piloting of new technologies.",
+        "Serve as a point of contact for engineering efforts while maintaining compliance with the customer's policies and guidelines.",
+        "Maintain documentation for exceptions to standards.",
+        "Provide timely and adequate response to threats/alerts.",
+        "Assess security events to drive to a resolution; provides timely and sufficient response to security incidents and assessment services.",
+      ],
+    },
+    {
+      company: "Coblatix",
+      location: "San Francisco, CA",
+      period: "June 2021 - Dec 2021",
+      website: "https://cobaltix.com",
+      position: "Senior Enterprise Network and Systems Consultant",
+      description: "Senior IT Consultant responsible for implementing technological solutions to solve business problems for clients throughout the Bay Area.",
+      responsibilities: [
+        "Technical lead and project manager for customers IT services.",
+        "Managed IT initiatives and collaborated with in-house technical staff on wide range of projects.",
+        "Provided strategic advice on technology services to achieve goals.",
+        "Followed cybersecurity best practices and engaged in training with clients.",
+        "Microsoft 365 migrations +Support and Azure administration- Intune and Cloud App Security.",
+        "Network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).",
+        "Prepared documentation and presented progress reports to customers.",
+      ],
+    },
+    {
+      company: "Nims & Associates",
+      location: "Petaluma, CA",
+      period: "Nov 2017 - June 2021",
+      website: "https://nimsassociates.com",
+      position: "Senior IT Systems Engineer",
+      description: "Senior IT Consultant responsible for planning and executing successful IT deployments and fostering strong client relationships. Additionally, required to develop, architect, design, and support the technology needs of clients ranging from 5-500 users.",
+      responsibilities: [
+        "Serve as the technical lead for clients throughout the Bay Area.",
+        "Implement projects ranging from on premises server builds (VMWare + Hyper-V), to Cloud deployments (AWS & Azure).",
+        "Office 365 migrations and Azure administration- Intune, and Cloud App Security.",
+        "Network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).",
+        "Perform project management on all projects.",
+        "Lead Engineer for all technology related topics and customer questions, issues and service opportunities.",
+        "Execution of project plans within time and budget constraints.",
+        "Perform security assessments and audits for current and prospective clients.",
+        "Develop backup and disaster recovery strategies.",
+        "Monitor backups (Local and offsite) for all clients.",
+        "Document client systems to facilitate future training and support activities.",
+        "Manage AWS Partnership for the entire company.",
+      ],
+    },
+    {
+      company: "KLH Consulting",
+      location: "Santa Rosa, CA",
+      period: "Apr 2013 - Nov 2017",
+      website: "https://klhconsulting.com",
+      position: "Senior Network Engineer",
+      description: "Designed, implemented, analyzed, and maintained the IT Infrastructure of internal and external customer environments; including network connectivity and utilization, Windows server administration, virtualization, performance tuning, backup and restore.",
+      responsibilities: [
+        "Served as the principal IT Engineer for clients throughout the Bay Area.",
+        "Implemented projects ranging from virtualization server builds (VMWare ESXi), Office 365 migrations, network switching, routing, firewalls, and secure remote access methods (Site to Site + Remote Access VPN’s).",
+        "Assisted with project management tasks on all projects.",
+        "Technical lead for all technology related topics and customer questions, issues and service opportunities.",
+        "Reviewed network and system monitoring reports on a regular basis to identify trends.",
+        "Managed internal and external resources in tasks relating to scheduling, implementing, and delivering client projects in a timely manner under demanding time constraints.",
+        "Supervise work of internal resources on client engagements to assure best practices are followed.",
+        "Performed security assessments and audits for current and prospective clients.",
+        "Developed backup and disaster recovery strategies.",
+        "Monitored backups (Local and offsite) for all clients.",
+        "Documented client systems to facilitate future training and support activities.",
+        "Consistently remained 100% billable on time sheets.",
+      ],
+    },
+    {
+      company: "Portola Systems",
+      location: "Sebastopol, CA",
+      period: "Dec 2010 - Apr 2013",
+      website: "https://www.portolasystems.net/",
+      position: "Engineer",
+      description: "Served small and medium businesses in all facets of technology, including workstations, servers, printers, networks, vendor specific hardware and software.",
+      responsibilities: [
+        "Designed and implemented Windows server environments including Active Directory 2003/2008, DHCP, DNS, WEB (IIS), Print, File services, DFS, and Group Policy Objects.",
+        "Configured and deployed Cisco networking technologies including switching, routing, security (ASA firewalls + VPN), and Cisco Aironet wireless devices.",
+        "Supported and administered VMWare server and clustered environments.",
+        "Served small and medium businesses in all facets of technology, including workstations, servers, printers, networks, vendor specific hardware and software.",
+        "Supported remote access solution implementations: VPN, Terminal Services, and Citrix.",
+        "Administered Exchange 2003 / 2007 / 2010 servers.",
+        "Provided phone system administration and support (Cisco CME, Unity, Nortel, and Shortel VOIP).",
+        "Served as escalation point for Helpdesk staff.",
+        "Mentor and trainer for new hires.",
+      ],
+    },
+    {
+      company: "Hansel Enterprises",
+      location: "Petaluma, CA",
+      period: "Apr 2009 - Nov 2010",
+      website: "https://gohansel.com",
+      position: "Junior Systems Administrator",
+      description: "Internal IT Department position supporting over 500 users in 7 different locations.",
+      responsibilities: [
+        "Responsible for all Helpdesk/desktop tickets and email.",
+        "Server support for all company-wide servers (File, Print, VPN, DNS, DHCP, DC’s, Web, etc.).",
+        "Administration of tape backups daily.",
+        "Deployed company’s first Linux server.",
+        "Provided support for third party software including company wide proprietary DMS system.",
+      ],
+    },
+    {
+      company: "Marketlive",
+      location: "Petaluma, CA",
+      period: "Sep 2007 - Apr 2009",
+      website: "https://kibocommerce.com/",
+      position: "NOC Technician II",
+      description: "Provided website and server support for 1200+ servers for a web development e-commerce company. Responsible for maintaining e-commerce sites availability, Windows and Linux server administration, and client facing communication in a fast-paced production environment.",
+      responsibilities: [
+        "Served as escalation point for NOC team members for trouble tickets and severity 1 outages.",
+        "Provided support for Windows Server OS 2000/2003 and Linux OS, including but not limited to administration of JVM, Apache, IIS services, MySQL and site performance research.",
+        "Responsible for client account access including Active Directory administration, and FTP.",
+        "Daily use of monitoring tools such as Gomez, Keynote, Nagios, and MRTG.",
+        "Contributed numerous documents to NOC knowledge base and training modules.",
+        "Trained new hires.",
+      ],
+    },
+    {
+      company: "Syntechs",
+      location: "Petaluma, CA",
+      period: "Nov 2006 - Sep 2007",
+      website: "https://syntechs.com/",
+      position: "Computer Technician",
+      description: "Contract position to repair computer hardware.",
+      responsibilities: [
+        "Provide hardware diagnosis and repair for laptop and desktop computers.",
+        "Accept service calls for computer hardware related issues.",
+        "Repaired computer systems via in home or business service calls.",
+        "Performed follow up with customers prior to closing tickets.",
+      ],
+    },
+  ],
+};
 ---
 
 <RootLayout
@@ -35,24 +195,65 @@ const projectsData = [
       <h1
         class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
       >
-        {t("pages.projects.allProjects")}
+        {projectsData.name}
       </h1>
       <p class="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        {t("pages.projects.showcase")}
+        {projectsData.title} @ <a href={projectsData.companyUrl}>{projectsData.company}</a>
+      </p>
+      <p class="text-md leading-6 text-gray-500 dark:text-gray-400">
+        <em>{projectsData.note}</em>
       </p>
     </div>
     <div class="container py-12">
-      <div class="-m-4 flex flex-wrap">
-        {
-          projectsData.map((d) => (
-            <Card
-              title={d.title}
-              description={d.description}
-              imgSrc={d.imgSrc}
-              href={d.href}
-            />
-          ))
-        }
+      <div class="prose dark:prose-dark">
+        <h2>Summary</h2>
+        <p>{projectsData.summary}</p>
+
+        <h2>Education</h2>
+        {projectsData.education.map((edu) => (
+          <p>
+            <strong>{edu.institution}</strong><br />
+            <em>{edu.year}</em><br />
+            {edu.degree}
+          </p>
+        ))}
+
+        <h2>Industry Certifications</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Vendor</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projectsData.certifications.map((cert) => (
+              <tr>
+                <td>{cert.vendor}</td>
+                <td>{cert.name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <h2>Work Experience</h2>
+        {projectsData.workExperience.map((work) => (
+          <div>
+            <h3>{work.company}</h3>
+            <p><em>{work.location}, {work.period}</em><br />
+            <strong>Website:</strong> <a href={work.website}>{work.company}</a></p>
+            <p><strong>Description:</strong> {work.description}<br />
+            <strong>Position:</strong> {work.position}</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+              {work.responsibilities.map((resp) => (
+                <li>{resp}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
+        <p>Last updated on Nov 2022</p>
       </div>
     </div>
   </div>
