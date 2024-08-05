@@ -1,0 +1,33 @@
+---
+title: Change Azure Log Analytics Retention
+summary: How to change the Azure Log Analytics retention period
+postLayout: simple
+date: '2023-07-27'
+cover: '@/assets/azureret.jpg'
+tags: ['microsoft','cloud']
+---
+
+I am currently working on a project and had to dive into backups and retention of storage accounts and logs stored in the Azure Log Analytics workspace. After digging around a little, I found that by default, Application Insights and Log Analytics have a data retention of 90 days.  You can opt to extend the retention up to 730 days. Below are the steps to do this.
+
+* Log into the [Azure Portal](https://portal.azure.com/)
+    
+* Find your Log Analytics workspace
+    
+* Click on Usage and Estimate costs under the General section
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1689731335794/0a9e41c1-eb41-4e0e-b9ee-2d4a7897003c.png)
+
+* Click Data Retention
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1689731521654/5badfdc3-574d-4c4b-ba00-9f0c7fc7400d.png)
+
+* Adjust the slider to the desired level of retention up to 730 days.
+    
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1689731581750/f7386a2c-7057-423b-9697-34c0e4dd5b0b.png)
+
+*Note that increasing the data retention, will result in additional Azure costs.  By default, logging from the engine includes 90 days of retention for data stored in the Log Analytics workspace of Application Insights.*
+
+The retention can also be modified for specific data tables within a Log Analytics workspace. If you need to target specific data types, please read [this article.](https://learn.microsoft.com/en-us/azure/sentinel/configure-data-retention)
