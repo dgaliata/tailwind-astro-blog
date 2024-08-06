@@ -24,7 +24,11 @@ input:-webkit-autofill:focus {
     transition: background-color 600000s 0s,
     color 600000s 0s;
 }
-.copy-code {
+.prose pre {
+    position: relative;
+  }
+  
+  .copy-code {
     position: absolute;
     top: 0;
     right: 0;
@@ -32,9 +36,12 @@ input:-webkit-autofill:focus {
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
     line-height: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
   }
   
   .copy-code:hover {
     background-color: #312e81;
   }
-  
