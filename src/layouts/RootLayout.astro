@@ -30,6 +30,44 @@ type Props = {
   <body
     class="bg-white text-black antialiased dark:bg-gray-950 dark:text-white"
   >
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+      codeBlocks.forEach((codeBlock) => {
+        let wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+
+        let copyButton = document.createElement("button");
+        copyButton.className = "copy-code";
+        copyButton.innerHTML = "Copy Code";
+
+        wrapper.appendChild(codeBlock.cloneNode(true));
+        wrapper.appendChild(copyButton);
+
+        codeBlock.replaceWith(wrapper);
+
+        copyButton.addEventListener("click", async () => {
+          await copyCode(wrapper, copyButton);
+        });
+      });
+
+      async function copyCode(wrapper, button) {
+        let code = wrapper.querySelector("pre code");
+        let text = code ? code.innerText : wrapper.querySelector("pre").innerText;
+
+        await navigator.clipboard.writeText(text);
+
+        // visual feedback that task is completed
+        button.innerText = "Code Copied";
+
+        setTimeout(() => {
+          button.innerText = "Copy Code";
+        }, 700);
+      }
+    });
+  </script>
+  <slot />
     <SectionContainer>
       <div class="flex h-screen flex-col justify-between font-sans">
         <Header />
