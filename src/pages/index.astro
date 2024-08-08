@@ -8,7 +8,7 @@ import ListPostCover from "@/components/ListPostCover.astro";
 import Tag from "@/components/Tag.astro";
 import { excludeDrafts, sortBlogPosts } from "@/functions";
 import { useTranslations } from "@/i18n";
-import { Code } from '@astro/components';
+
 
 const t = useTranslations();
 
@@ -92,14 +92,6 @@ const posts = await getCollection("blog", excludeDrafts).then(sortBlogPosts);
       </div>
     )
   }
-  <div class="code-block">
-    <pre>
-      <code>console.log('Hello, world!');</code>
-    </pre>
-    <button class="copy-code-button">Copy</button>
-  </div>
-  
-  <script type="module" src="/src/scripts/copyToClipboard.js"></script>
   <!--TODO: Add newsletter form-->
   <!--{siteMetadata.newsletter?.provider && (-->
   <!--        <div class="flex items-center justify-center pt-4">-->
