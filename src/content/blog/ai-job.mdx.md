@@ -1,5 +1,5 @@
 ---
-title: Will AI Replace My Job?
+title: AI Won't Replace You But Someone Using AI Might
 summary: Humans Using AI Will Replace Your Job, Not AI Itself
 postLayout: simple
 date: '2024-11-01'
