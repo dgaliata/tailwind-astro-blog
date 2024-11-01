@@ -1,6 +1,6 @@
 ---
 title: Will AI Replace My Job?
-summary: 'Spoiler: Humans Using AI Will Replace Your Job, Not AI Itself'
+summary: Humans Using AI Will Replace Your Job, Not AI Itself
 postLayout: simple
 date: '2024-11-01'
 cover: '@/assets/aijob.jpg'
