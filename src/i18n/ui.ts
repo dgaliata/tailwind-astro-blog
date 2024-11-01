@@ -5,7 +5,7 @@ export const ui = {
     // Site Metadata
     'siteMetadata.title': 'David Galiata Blog',
     'siteMetadata.headerTitle': 'galiata.blog',   
-    'siteMetadata.description': '👋 Welcome to my blog. I am an IT Consultant turned Cybersecurity Architect with a passion for DevOps, Cybersecurity, and Cloud technologies. Committed to lifelong learning, I enjoy sharing my industry adventures through blogging.',
+    'siteMetadata.description': '👋 Welcome to my blog. I am an IT Consultant turned Cybersecurity Engineer with a passion for DevOps, Cybersecurity, and Cloud technologies. Committed to lifelong learning, I enjoy sharing my industry adventures through blogging.',
     'siteMetadata.language': 'en-US',
 
     // Pages

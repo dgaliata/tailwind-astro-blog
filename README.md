@@ -2,7 +2,7 @@
 
 ## About Me 👨‍💻
 
-I am an IT Consultant turned Cybersecurity Architect with a passion for DevOps, Cybersecurity, and Cloud technologies. Committed to lifelong learning, I enjoy sharing my industry adventures through blogging.
+I am an IT Consultant turned Cybersecurity Engineer with a passion for DevOps, Cybersecurity, and Cloud technologies. Committed to lifelong learning, I enjoy sharing my industry adventures through blogging.
 
 ## Why have this blog?
 
