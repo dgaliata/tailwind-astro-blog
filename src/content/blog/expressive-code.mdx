@@ -70,6 +70,13 @@ export default defineConfig({
   ]
 });
 ```
+3. Pushed it to my repo
+```git
+git add .
+git commit -m "Installing Expressive Code"
+git push origin main
+```
+
 ### The Gotcha: Integration Order Matters
 
 Here's where I hit a small snag: initially, I placed the Expressive Code integration after my MDX integration, which resulted in an error. Luckily the Vercel deployment logs told me exactly what the issue was- Expressive Code needs to process the code blocks before MDX does its thing, so the integration needed to be placed before `mdx()` in the integrations array.
