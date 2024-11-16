@@ -6,31 +6,23 @@ import solidJs from "@astrojs/solid-js";
 import { SITE_METADATA } from "./src/consts.ts";
 import metaTags from "astro-meta-tags";
 import robotsTxt from "astro-robots-txt";
-import { astroExpressiveCode } from '@expressive-code/astro'; // Correct import for Expressive Code
+import expressiveCode from 'astro-expressive-code'
 
 // https://astro.build/config
 export default defineConfig({
   prefetch: true,
   site: SITE_METADATA.siteUrl,
-  integrations: [
-    astroExpressiveCode({ // Move this before mdx()
-      themes: ['github-dark', 'github-light'],
-      styleOverrides: {
-        frames: {
-          editorActiveTabIndicatorTopColor: 'transparent',
-          editorActiveTabBorderColor: '#80808080',
-          editorTabBarBorderBottomColor: '#80808080',
-          tooltipSuccessBackground: 'black',
-        },
-        uiFontFamily: 'inherit',
-        borderColor: '#80808080',
+  integrations: [mdx(), sitemap(), tailwind(), solidJs(), metaTags(), robotsTxt(), expressiveCode({
+    themes: ['github-dark', 'github-light'],
+    styleOverrides: {
+      frames: {
+        editorActiveTabIndicatorTopColor: 'transparent',
+        editorActiveTabBorderColor: '#80808080',
+        editorTabBarBorderBottomColor: '#80808080',
+        tooltipSuccessBackground: 'black'
       },
-    }),
-    mdx(), // This should now follow astroExpressiveCode
-    sitemap(),
-    tailwind(),
-    solidJs(),
-    metaTags(),
-    robotsTxt(),
-  ],
+      uiFontFamily: 'inherit',
+      borderColor: '#80808080'
+    }
+  }),]
 });
