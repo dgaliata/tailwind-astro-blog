@@ -14,7 +14,7 @@ export default defineConfig({
   integrations: [
     // Move expressiveCode before mdx
     expressiveCode({
-      themes: ['github-dark', 'github-light'],
+      themes: ['aurora-x'],
       styleOverrides: {
         frames: {
           editorActiveTabIndicatorTopColor: 'transparent',
