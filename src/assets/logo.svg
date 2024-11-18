@@ -13,13 +13,28 @@
   <circle cx="55" cy="20" r="5" fill="#E74C3C" />
 
   <!-- Text: initials -->
-  <text x="20" y="60" font-family="'Courier New', monospace" font-size="22" fill="#FFFFFF">
+  <text x="20" y="60" font-family="'Courier New', monospace" font-size="24" fill="#FFFFFF">
     DG@
   </text>
 
   <!-- Terminal prompt symbol -->
-  <text x="90" y="60" font-family="'Courier New', monospace" font-size="22" fill="#9A9A9A">
-    ~/>
+  <text x="90" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A">
+    ~/
+  </text>
+
+  <!-- Blinking cursor animation -->
+  <style>
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor {
+      animation: blink 1s infinite;
+    }
+  </style>
+  
+  <!-- Blinking cursor -->
+  <text x="115" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A" class="cursor">
+    _
   </text>
 </svg>
-
