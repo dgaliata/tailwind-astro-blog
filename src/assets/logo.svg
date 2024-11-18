@@ -12,13 +12,14 @@
   <circle cx="40" cy="20" r="5" fill="#F4D03F" />
   <circle cx="55" cy="20" r="5" fill="#E74C3C" />
 
-  <!-- Text: full name -->
+  <!-- Text: initials -->
   <text x="20" y="60" font-family="'Courier New', monospace" font-size="24" fill="#FFFFFF">
-    Galiata@
+    DG@
   </text>
 
   <!-- Terminal prompt symbol -->
-  <text x="100" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A">
+  <text x="90" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A">
     ~/>
   </text>
 </svg>
+
