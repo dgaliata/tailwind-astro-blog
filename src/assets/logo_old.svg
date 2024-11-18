@@ -22,7 +22,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="3.6090402"
-     inkscape:cx="78.55274"
+     inkscape:cx="93.238086"
      inkscape:cy="20.919689"
      inkscape:window-width="1512"
      inkscape:window-height="867"
@@ -79,16 +79,21 @@
      id="text1022"><tspan
        sodipodi:role="line"
        id="tspan1020"
-       style="stroke-width:2.09168"></tspan></text>
+       style="stroke-width:2.09168" /></text>
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:83.6671px;line-height:1.25;font-family:sans-serif;fill:#49de80;fill-opacity:1;stroke:none;stroke-width:2.09168"
-     x="334.81998"
-     y="405.04224"
+     style="font-style:normal;font-weight:normal;font-size:33.4668px;line-height:1.25;font-family:sans-serif;fill:#49de80;fill-opacity:1;stroke:none;stroke-width:2.09168"
+     x="341.77475"
+     y="363.31345"
      id="text6540"><tspan
        sodipodi:role="line"
        id="tspan6538"
-       style="stroke-width:2.09168;fill:#49de80;fill-opacity:1"
-       x="334.81998"
-       y="405.04224">DG</tspan></text>
+       style="font-size:33.4668px;fill:#49de80;fill-opacity:1;stroke-width:2.09168"
+       x="341.77475"
+       y="363.31345">David</tspan><tspan
+       sodipodi:role="line"
+       style="font-size:33.4668px;fill:#49de80;fill-opacity:1;stroke-width:2.09168"
+       x="341.77475"
+       y="405.14694"
+       id="tspan3961">Galiata</tspan></text>
 </svg>
