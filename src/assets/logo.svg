@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 90">
   <!-- Background -->
-  <rect width="200" height="100" fill="#282C34" />
+  <rect width="180" height="90" fill="#282C34" />
   
   <!-- Terminal prompt style box -->
-  <rect x="10" y="10" width="180" height="80" rx="5" ry="5" fill="#1C1F26" />
+  <rect x="10" y="10" width="160" height="70" rx="5" ry="5" fill="#1C1F26" />
   
   <!-- Green circle for terminal indicator -->
   <circle cx="25" cy="20" r="5" fill="#58D68D" />
@@ -12,13 +12,13 @@
   <circle cx="40" cy="20" r="5" fill="#F4D03F" />
   <circle cx="55" cy="20" r="5" fill="#E74C3C" />
 
-  <!-- Text: initials -->
-  <text x="20" y="60" font-family="'Courier New', monospace" font-size="36" fill="#FFFFFF">
-    DG@
+  <!-- Text: full name -->
+  <text x="20" y="60" font-family="'Courier New', monospace" font-size="24" fill="#FFFFFF">
+    Galiata@
   </text>
 
   <!-- Terminal prompt symbol -->
-  <text x="90" y="60" font-family="'Courier New', monospace" font-size="36" fill="#9A9A9A">
+  <text x="100" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A">
     ~/>
   </text>
 </svg>
