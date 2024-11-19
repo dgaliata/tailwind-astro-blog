@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 90">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90">
   <!-- Background -->
-  <rect width="180" height="90" fill="#282C34" />
+  <rect width="220" height="90" fill="#282C34" />
   
   <!-- Terminal prompt style box -->
-  <rect x="10" y="10" width="160" height="70" rx="5" ry="5" fill="#1C1F26" />
+  <rect x="10" y="10" width="200" height="70" rx="5" ry="5" fill="#1C1F26" />
   
   <!-- Green circle for terminal indicator -->
   <circle cx="25" cy="20" r="5" fill="#58D68D" />
@@ -13,12 +13,12 @@
   <circle cx="55" cy="20" r="5" fill="#E74C3C" />
 
   <!-- Text: initials -->
-  <text x="20" y="60" font-family="'Courier New', monospace" font-size="24" fill="#FFFFFF">
-    DG@
+  <text x="20" y="60" font-family="'Courier New', monospace" font-size="20" fill="#FFFFFF">
+    galiata.blog@
   </text>
 
   <!-- Terminal prompt symbol -->
-  <text x="65" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A">
+  <text x="180" y="60" font-family="'Courier New', monospace" font-size="16" fill="#9A9A9A">
     ~/
   </text>
 
@@ -34,7 +34,7 @@
   </style>
   
   <!-- Blinking cursor -->
-  <text x="90" y="60" font-family="'Courier New', monospace" font-size="24" fill="#9A9A9A" class="cursor">
+  <text x="200" y="60" font-family="'Courier New', monospace" font-size="16" fill="#9A9A9A" class="cursor">
     _
   </text>
 </svg>
