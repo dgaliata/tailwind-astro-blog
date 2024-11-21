@@ -15,7 +15,7 @@ When I first started learning Python, I found myself constantly Googling the bas
 
 ## Data Types
 
-```Python
+```python
 # Numbers
 coins = 42            # integer
 jump_height = 3.14    # float
@@ -38,7 +38,7 @@ empty_block = None    # represents absence of value
 
 ## Variables
 
-```Python
+```python
 # Basic assignment
 lives = 3
 player_name = "Luigi"
@@ -54,7 +54,7 @@ _princess = "OK"       # Can start with underscore
 
 ## Operators
 
-```Python
+```python
 # Arithmetic
 coins + bonus_coins    # Addition
 lives - damage         # Subtraction
@@ -78,9 +78,9 @@ has_mushroom or is_fire  # True if at least one is true
 not is_small             # Inverts boolean value
 ```
 
-## String operations
+## String Operations
 
-```Python
+```python
 # String concatenation
 character = "Mario"
 action = "jumps"
@@ -105,9 +105,9 @@ world[0:5]    # 'World'
 world[-3:]    # '1-1'
 ```
 
-## Basic List operations
+## Basic List Operations
 
-```Python
+```python
 # Creating lists
 characters = ["Mario", "Luigi", "Peach", "Yoshi"]
 inventory = ["Mushroom", 3, "Star", True]
@@ -125,7 +125,7 @@ reversed_chars = characters[::-1]  # Reverse the list
 
 ## Tuples
 
-```Python
+```python
 # Creating tuples (immutable lists)
 coordinates = (3, 5)  # Mario's position in level
 pipe_location = (100, 200, "Underground")
@@ -143,7 +143,7 @@ mario_pos = coordinates + (0,)  # Combine tuples
 
 ## Dictionaries
 
-```Python
+```python
 # Creating dictionaries
 
 character_stats = {
@@ -174,7 +174,7 @@ if "Star" in power_ups:
 
 ## Sets
 
-```Python
+```python
 # Creating sets (unique items only)
 available_characters = {"Mario", "Luigi", "Peach", "Yoshi"}
 unlocked_worlds = {1, 2, 3}
@@ -194,7 +194,7 @@ unique_to_player1 = player1_items - player2_items  # Difference
 
 ## Basic Functions
 
-```Python
+```python
 # Defining a function
 def power_up(character):
     return f"{character} got a Super Star!"
@@ -215,7 +215,7 @@ calculate_score(50, 120)       # 6000
 
 ## For Loops
 
-```Python
+```python
 # Basic for loop
 for character in ["Mario", "Luigi", "Peach"]:
     print(f"{character} is ready to play!")
@@ -235,7 +235,7 @@ for level, boss in enumerate(["Bowser Jr", "Kamek", "Bowser"], 1):
 
 ## While Loops
 
-```Python
+```python
 # Basic while loop
 lives = 3
 while lives > 0:
@@ -267,7 +267,7 @@ while player_power != "Super":
 
 Here's an example to tie everything together.
 
-```Python
+```python
 # Track Mario's progress through a level
 def play_level(level_number):
     player = {
