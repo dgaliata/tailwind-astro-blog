@@ -206,24 +206,24 @@ const projectsData = {
     </div>
     <div class="container py-12">
       <div class="prose dark:prose-dark text-gray-700 dark:text-gray-200">
-        <h2 class="text-blue-600 dark:text-blue-400">Summary</h2>
+        <h2 class="text-blue-600 dark:text-slate-50">Summary</h2>
         <p>{projectsData.summary}</p>
 
-        <h2 class="text-blue-600 dark:text-blue-400">Education</h2>
+        <h2 class="text-blue-600 dark:text-slate-50">Education</h2>
         {projectsData.education.map((edu) => (
           <p>
-            <strong class="text-blue-600 dark:text-blue-400">{edu.institution}</strong><br />
+            <strong class="text-blue-600 dark:text-slate-50">{edu.institution}</strong><br />
             <em>{edu.year}</em><br />
             {edu.degree}
           </p>
         ))}
 
-        <h2 class="text-blue-600 dark:text-blue-400">Industry Certifications</h2>
+        <h2 class="text-blue-600 dark:text-slate-50">Industry Certifications</h2>
         <table>
           <thead>
             <tr>
-              <th class="text-blue-600 dark:text-blue-400">Vendor</th>
-              <th class="text-blue-600 dark:text-blue-400">Name</th>
+              <th class="text-blue-600 dark:text-slate-50">Vendor</th>
+              <th class="text-blue-600 dark:text-slate-50">Name</th>
             </tr>
           </thead>
           <tbody>
@@ -236,7 +236,7 @@ const projectsData = {
           </tbody>
         </table>
 
-        <h2 class="text-blue-600 dark:text-blue-400">Work Experience</h2>
+        <h2 class="text-blue-600 dark:text-slate-50">Work Experience</h2>
         {projectsData.workExperience.map((work) => (
           <div>
             <h3 class="text-blue-600 dark:text-blue-400">{work.company}</h3>
