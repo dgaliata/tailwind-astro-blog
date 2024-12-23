@@ -206,24 +206,24 @@ const projectsData = {
     </div>
     <div class="container py-12">
       <div class="prose dark:prose-dark text-gray-700 dark:text-gray-200">
-        <h2 class="text-blue-600 dark:text-blue-400">Summary</h2>
+        <h2 class="text-blue-600 dark:text-slate-50">Summary</h2>
         <p>{projectsData.summary}</p>
 
-        <h2 class="text-blue-600 dark:text-blue-400">Education</h2>
+        <h2 class="text-blue-600 dark:text-zinc-200">Education</h2>
         {projectsData.education.map((edu) => (
           <p>
-            <strong class="text-blue-600 dark:text-blue-400">{edu.institution}</strong><br />
+            <strong class="text-blue-600 dark:text-zinc-200">{edu.institution}</strong><br />
             <em>{edu.year}</em><br />
             {edu.degree}
           </p>
         ))}
 
-        <h2 class="text-blue-600 dark:text-blue-400">Industry Certifications</h2>
+        <h2 class="text-blue-600 dark:text-zinc-200">Industry Certifications</h2>
         <table>
           <thead>
             <tr>
-              <th class="text-blue-600 dark:text-blue-400">Vendor</th>
-              <th class="text-blue-600 dark:text-blue-400">Name</th>
+              <th class="text-blue-600 dark:text-zinc-200">Vendor</th>
+              <th class="text-blue-600 dark:text-zinc-200">Name</th>
             </tr>
           </thead>
           <tbody>
@@ -236,15 +236,15 @@ const projectsData = {
           </tbody>
         </table>
 
-        <h2 class="text-blue-600 dark:text-blue-400">Work Experience</h2>
+        <h2 class="text-blue-600 dark:text-zinc-200">Work Experience</h2>
         {projectsData.workExperience.map((work) => (
           <div>
-            <h3 class="text-blue-600 dark:text-blue-400">{work.company}</h3>
-            <p class="text-gray-700 dark:text-gray-200"><em>{work.location}, {work.period}</em><br />
-            <strong class="text-blue-600 dark:text-blue-400">Website:</strong> <a href={work.website} class="text-green-400">{work.company}</a></p>
-            <p class="text-gray-700 dark:text-gray-200"><strong class="text-blue-600 dark:text-blue-400">Description:</strong> {work.description}<br />
-            <strong class="text-blue-600 dark:text-blue-400">Position:</strong> {work.position}</p>
-            <p class="text-gray-700 dark:text-gray-200"><strong class="text-blue-600 dark:text-blue-400">Responsibilities:</strong></p>
+            <h3 class="text-blue-600 dark:text-zinc-200">{work.company}</h3>
+            <p class="text-gray-700 dark:text-zinc-200"><em>{work.location}, {work.period}</em><br />
+            <strong class="text-blue-600 dark:text-zinc-200">Website:</strong> <a href={work.website} class="text-green-400">{work.company}</a></p>
+            <p class="text-gray-700 dark:text-gray-200"><strong class="text-blue-600 dark:text-zinc-200">Description:</strong> {work.description}<br />
+            <strong class="text-blue-600 dark:text-zinc-200">Position:</strong> {work.position}</p>
+            <p class="text-gray-700 dark:text-gray-200"><strong class="text-blue-600 dark:text-zinc-200">Responsibilities:</strong></p>
             <ul class="text-gray-700 dark:text-gray-200">
               {work.responsibilities.map((resp) => (
                 <li>{resp}</li>
