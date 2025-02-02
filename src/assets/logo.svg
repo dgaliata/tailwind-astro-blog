@@ -5,12 +5,14 @@
   <!-- Terminal prompt style box -->
   <rect x="10" y="10" width="200" height="70" rx="5" ry="5" fill="#1C1F26" />
   
-  <!-- Green circle for terminal indicator -->
-  <circle cx="25" cy="20" r="5" fill="#58D68D" />
+  <!-- Red circle for terminal close (leftmost) -->
+  <circle cx="25" cy="20" r="5" fill="#E74C3C" />
   
-  <!-- Yellow and Red circles for terminal close buttons -->
+  <!-- Yellow circle for terminal minimize (middle) -->
   <circle cx="40" cy="20" r="5" fill="#F4D03F" />
-  <circle cx="55" cy="20" r="5" fill="#E74C3C" />
+
+  <!-- Green circle for terminal close (rightmost) -->
+  <circle cx="55" cy="20" r="5" fill="#58D68D" />
 
   <!-- Text: initials -->
   <text x="20" y="60" font-family="'Courier New', monospace" font-size="20" fill="#FFFFFF">
