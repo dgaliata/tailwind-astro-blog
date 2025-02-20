@@ -27,7 +27,9 @@ The real challenge isn't just finding these models; it's understanding their con
 
 Risk assessment for AI systems requires us to think beyond traditional vulnerability scanning and threat modeling. When assessing AI risk, we need to consider both technical and ethical dimensions. An AI model might be technically secure but still pose risks through biased outputs or privacy violations.
 
-Consider a recommendation engine used in e-commerce: beyond just protecting it from attacks, we need to assess whether it might inadvertently reveal customer preferences through its recommendations, whether it maintains data privacy standards, and whether its decisions could introduce bias into the customer experience. These considerations go well beyond traditional security risk assessments.
+Take a large language model deployed in an enterprise setting for document analysis and summary generation. Traditional security risk assessment would focus on API security, authentication, and access controls. However, with AI systems, we need to consider additional attack vectors. An attacker might use carefully crafted inputs to make the model reveal sensitive information embedded in its training data. They might probe the model's responses to reconstruct proprietary information about your business processes.
+
+These risks become even more complex when we consider model supply chain security. Many organizations use pre-trained models from third-party vendors, then fine-tune them on internal data. This creates a new dimension of risk assessment: How do we verify the integrity of the base model? What controls exist to prevent the model from retaining sensitive information from the fine-tuning data? How can we ensure the model's behavior remains consistent and trustworthy after updates?
 
 ### 3. Understanding Data Flows in the AI Context
 
